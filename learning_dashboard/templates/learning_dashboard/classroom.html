@@ -1,1 +1,119 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'learning_dashboard/style.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'learning_dashboard/classroom.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'learning_dashboard/sidebar.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!--
 <p>this is the classroom</p>
+-->
+
+<div class="sidebar">
+
+    <!--
+    <div class="page-heading">Teaching Hub</div>
+    -->
+    <div class="logo"></div>
+
+    <img src="https://pbs.twimg.com/profile_images/1353806309397655553/0zEtkDvx_400x400.jpg" class="profile-pic" />
+    <div class="student-name">Robert</div>
+    <div class="student-email">rdowney@gmail.com</div>
+
+    <div class="nav-link"><a href="/dashboard">Dashboard</a></div>
+    <div class="nav-link"><a class="active" href="#">Live Classroom</a></div>
+    <div class="nav-link"><a href="/announcements">Announcements</a></div>
+    <div class="nav-link"><a href="/resources">Resources</a></div>
+    <div class="nav-link"><a href="#">Wallets</a></div>
+    <div class="nav-link"><a href="#">Summary</a></div>
+    <div class="nav-link"><a href="#">Accounts</a></div>
+    <div class="nav-link"><a href="#">Settings</a></div>
+
+</div>
+
+<div class="wrapper">
+
+    <div class="header">
+        <div class="title">LIVE CLASSROOM</div>
+        <div class="leave-btn"><button onclick=leaveClass><i class="fa fa-sign-out"></i> Leave Classroom</button></div>
+        <form>
+            <input type="text" name="search" class="search" placeholder="Search anything here..."></input>
+        </form>
+    </div>
+
+    <div class="classroom">
+
+        <div>
+            <div class="video-feed"></div>
+            <div class="chat-box">
+                <ul class="chat-thread">
+                    <li>Are we meeting today?</li>
+                    <li>yes, what time suits you?</li>
+                    <li>I was thinking after lunch, I have a meeting in the morning</li>
+                </ul>
+                
+                <form class="chat-window">
+                    <input class="chat-window-message" name="chat-window-message" type="text" autocomplete="off" autofocus />
+                </form>
+            </div>
+        </div>
+        <div>
+
+            <div class="lesson-files">
+                
+                <div class="lesson-header">
+                    <span>Lesson Files</span>
+                    <button class="download" onclick="downloadAll">Download All</button>
+                </div>
+
+                <div class="lesson-files-wrapper">
+                    <button class="lesson-file" onclick="downloadFile">
+                        <img src="https://img.icons8.com/ios/50/000000/ms-excel.png"/>
+                        <span>English Notes</span>
+                        <i class="fa fa-download"></i>
+                    </button>
+                    <button class="lesson-file" onclick="downloadFile">
+                        <img src="https://img.icons8.com/ios/50/000000/ms-excel.png"/>
+                        <span>English Notes</span>
+                        <i class="fa fa-download"></i>
+                    </button>
+                    <button class="lesson-file" onclick="downloadFile">
+                        <img src="https://img.icons8.com/ios/50/000000/ms-excel.png"/>
+                        <span>English Notes</span>
+                        <i class="fa fa-download"></i>
+                    </button>
+                    <button class="lesson-file" onclick="downloadFile">
+                        <img src="https://img.icons8.com/ios/50/000000/ms-excel.png"/>
+                        <span>English Notes</span>
+                        <i class="fa fa-download"></i>
+                    </button>
+                    <button class="lesson-file" onclick="downloadFile">
+                        <img src="https://img.icons8.com/ios/50/000000/ms-excel.png"/>
+                        <span>English Notes</span>
+                        <i class="fa fa-download"></i>
+                    </button>
+                    <button class="lesson-file" onclick="downloadFile">
+                        <img src="https://img.icons8.com/ios/50/000000/ms-excel.png"/>
+                        <span>English Notes</span>
+                        <i class="fa fa-download"></i>
+                    </button>
+                </div>
+
+            </div>
+
+            <div class="notes-box">
+                <button class="save-notes" onclick="saveNotes">Save</button>
+                <div class="existing-notes">
+                    <div>
+                        This section is like notepad, the person can write notes in the text box and when they press save, it ends the text and uses the API to save it.
+                    </div>
+                </div>
+                <form>
+                    <textarea></textarea>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+</div>
