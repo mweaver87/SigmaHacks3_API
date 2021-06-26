@@ -80,7 +80,7 @@
 .classroom div div.notes-box {
     width: 100%;
     height: 65%;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
 }
 
@@ -272,4 +272,57 @@
 
 .lesson-files .lesson-files-wrapper .lesson-file i{
     float: right;
+}
+
+/* Notes */
+
+.notes-box {
+    overflow-y: hidden;
+}
+
+.notes-box .save-notes {
+    width: 20%;
+    height: 2em;
+    font-size: 1em;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(43, 43, 43);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition-duration: 0.25s;
+    margin: 20px;
+}
+
+.notes-box .save-notes:hover {
+    background-color: rgb(100, 100, 100);
+}
+
+.notes-box form {
+    margin: 20px;
+    margin-top: 0px;
+}
+
+.notes-box .existing-notes {
+    font-weight: normal;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    display: flex;
+    width: 90%;
+    margin: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    height: 50%;
+    flex-direction: column;
+}
+
+.notes-box form textarea{
+    width: 90%;
+	height: 150%;
+	border: 3px solid #cccccc;
+	padding: 5px;
+    overflow-y: scroll;
+    resize: none;
+    border-radius: 10px;
 }
