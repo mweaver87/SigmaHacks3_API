@@ -1,1 +1,51 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'learning_dashboard/style.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'learning_dashboard/classroom.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'learning_dashboard/sidebar.css' %}">
+
+<!--
 <p>this is the classroom</p>
+-->
+
+<div class="sidebar">
+
+    <!--
+    <div class="page-heading">Teaching Hub</div>
+    -->
+    <div class="logo"></div>
+    <div class="pragya">Pragya</div>
+
+    <img src="https://pbs.twimg.com/profile_images/1353806309397655553/0zEtkDvx_400x400.jpg" class="profile-pic" />
+    <div class="student-name">Robert</div>
+    <div class="student-email">rdowney@gmail.com</div>
+
+    <div class="nav-link"><a href="/dashboard">Dashboard</a></div>
+    <div class="nav-link"><a class="active" href="#">Live Classroom</a></div>
+    <div class="nav-link"><a href="/announcements">Announcements</a></div>
+    <div class="nav-link"><a href="/resources">Resources</a></div>
+    <div class="nav-link"><a href="#">Wallets</a></div>
+    <div class="nav-link"><a href="#">Summary</a></div>
+    <div class="nav-link"><a href="#">Accounts</a></div>
+    <div class="nav-link"><a href="#">Settings</a></div>
+
+</div>
+
+<div class="wrapper">
+
+    <div class="header">
+        <div class="title"><h1>LIVE CLASSROOM</h1></div>
+        <div class="leave-btn"><button onclick=leaveClass>Leave Classroom</button></div>
+        <div class="search">Search anything here...</div>
+    </div>
+
+    <div class="classroom">
+
+        <div class="video-feed"></div>
+        <div class="lesson-files"></div>
+        <div class="chat-box"></div>
+        <div class="notes-box"></div>
+
+    </div>
+
+</div>
