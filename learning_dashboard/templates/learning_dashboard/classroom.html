@@ -3,6 +3,7 @@
 <link rel="stylesheet" type="text/css" href="{% static 'learning_dashboard/style.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'learning_dashboard/classroom.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'learning_dashboard/sidebar.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <!--
 <p>this is the classroom</p>
@@ -34,17 +35,23 @@
 <div class="wrapper">
 
     <div class="header">
-        <div class="title"><h1>LIVE CLASSROOM</h1></div>
-        <div class="leave-btn"><button onclick=leaveClass>Leave Classroom</button></div>
-        <div class="search">Search anything here...</div>
+        <div class="title">LIVE CLASSROOM</div>
+        <div class="leave-btn"><button onclick=leaveClass><i class="fa fa-sign-out"></i> Leave Classroom</button></div>
+        <form>
+            <input type="text" class="search" placeholder="Search anything here..."></input>
+        </form>
     </div>
 
     <div class="classroom">
 
-        <div class="video-feed"></div>
-        <div class="lesson-files"></div>
-        <div class="chat-box"></div>
-        <div class="notes-box"></div>
+        <div>
+            <div class="video-feed"></div>
+            <div class="chat-box"></div>
+        </div>
+        <div>
+            <div class="lesson-files"></div>
+            <div class="notes-box"></div>
+        </div>
 
     </div>
 
