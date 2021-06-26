@@ -30,4 +30,3 @@ P: StuNum#1
 *teacher*
 U: teacher
 P: TeaNum#1
-Test
