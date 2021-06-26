@@ -27,6 +27,8 @@ SECRET_KEY = '(@v=8pl*9%7*2$ry&j71985jnqhath&i=(=(jnr%jvzm#zcvu@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
 ALLOWED_HOSTS = []
 
 
