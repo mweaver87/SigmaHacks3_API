@@ -18,17 +18,11 @@
 
 .sidebar .logo {
     margin-top: 10px;
-    background-image: url("https://img.icons8.com/ios-glyphs/100/ffffff/graduation-cap--v1.png");
+    background-image: url("./Teacher.png");
     background-color: rgb(2, 6, 41);
     width: 100px;
-    height: 100px;
-}
-
-.sidebar .pragya {
-    margin-top: 5px;
-    font-weight: bolder;
-    font-size: 22px;
-    color: rgb(255, 255, 255);
+    height: 120px;
+    background-size: 100px auto;
     margin-bottom: 20px;
 }
 
