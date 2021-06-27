@@ -37,30 +37,32 @@
         <div class="title">LIVE CLASSROOM</div>
         <div class="leave-btn"><button onclick=leaveClass><i class="fa fa-sign-out"></i> Leave Classroom</button></div>
         <form>
-            <input type="text" name="search" class="search" placeholder="Search anything here..."></input>
+            <input type="text" name="search" class="search" placeholder="Search anything here...">
         </form>
     </div>
 
     <div class="classroom">
 
         <div>
-            <div class="video-feed"></div>
+            <div class="video-feed">
+                <img src="{% url 'video_feed' %}" style="padding-left: 20px; padding-right: 20px; padding-top: 20px;">
+            </div>
             <div class="chat-box">
                 <ul class="chat-thread">
                     <li>Are we meeting today?</li>
                     <li>yes, what time suits you?</li>
                     <li>I was thinking after lunch, I have a meeting in the morning</li>
                 </ul>
-                
+
                 <form class="chat-window">
                     <input class="chat-window-message" name="chat-window-message" type="text" autocomplete="off" autofocus />
                 </form>
             </div>
         </div>
-        <div>
 
+        <div>
             <div class="lesson-files">
-                
+
                 <div class="lesson-header">
                     <span>Lesson Files</span>
                     <button class="download" onclick="downloadAll">Download All</button>
@@ -68,48 +70,49 @@
 
                 <div class="lesson-files-wrapper">
                     <button class="lesson-file" onclick="downloadFile">
-                        <img src="https://img.icons8.com/ios/50/000000/ms-excel.png"/>
+                        <img src="https://img.icons8.com/ios/50/000000/ms-excel.png" />
                         <span>English Notes</span>
                         <i class="fa fa-download"></i>
                     </button>
                     <button class="lesson-file" onclick="downloadFile">
-                        <img src="https://img.icons8.com/ios/50/000000/ms-excel.png"/>
+                        <img src="https://img.icons8.com/ios/50/000000/ms-excel.png" />
                         <span>English Notes</span>
                         <i class="fa fa-download"></i>
                     </button>
                     <button class="lesson-file" onclick="downloadFile">
-                        <img src="https://img.icons8.com/ios/50/000000/ms-excel.png"/>
+                        <img src="https://img.icons8.com/ios/50/000000/ms-excel.png" />
                         <span>English Notes</span>
                         <i class="fa fa-download"></i>
                     </button>
                     <button class="lesson-file" onclick="downloadFile">
-                        <img src="https://img.icons8.com/ios/50/000000/ms-excel.png"/>
+                        <img src="https://img.icons8.com/ios/50/000000/ms-excel.png" />
                         <span>English Notes</span>
                         <i class="fa fa-download"></i>
                     </button>
                     <button class="lesson-file" onclick="downloadFile">
-                        <img src="https://img.icons8.com/ios/50/000000/ms-excel.png"/>
+                        <img src="https://img.icons8.com/ios/50/000000/ms-excel.png" />
                         <span>English Notes</span>
                         <i class="fa fa-download"></i>
                     </button>
                     <button class="lesson-file" onclick="downloadFile">
-                        <img src="https://img.icons8.com/ios/50/000000/ms-excel.png"/>
+                        <img src="https://img.icons8.com/ios/50/000000/ms-excel.png" />
                         <span>English Notes</span>
                         <i class="fa fa-download"></i>
                     </button>
                 </div>
-
             </div>
-
             <div class="notes-box">
-                <button class="save-notes" onclick="saveNotes">Save</button>
-                <div class="existing-notes">
-                    <div>
-                        This section is like notepad, the person can write notes in the text box and when they press save, it ends the text and uses the API to save it.
+                <form method="POST" action="{% url 'save_notes' %}">
+                    {% csrf_token %}
+                    <button id="submit_button" class="save-notes" type="submit">Save</button>
+                    <input type="text" id="subject" name="subject" placeholder="Enter Subject" required>
+                    <div class="existing-notes">
+                        <div>
+                            This section is like notepad, the person can write notes in the text box and when they press save, it will save the notes into a local folder as a .txt file.
+                        </div>
                     </div>
-                </div>
-                <form>
-                    <textarea></textarea>
+                    <textarea id="note_block" name="note_block"></textarea>
+
                 </form>
             </div>
         </div>
@@ -117,3 +120,25 @@
     </div>
 
 </div>
+
+<script type="text/javascript">
+    $('form').on('submit', function (event) {
+        var element = document.getElementById('submit_button');
+    });
+</script>
+
+<script type="text/javascript">
+    $('form').on('submit', function (event) {
+        var element = document.getElementById('post_comment');
+    });
+</script>
+
+<!--
+<script>
+    $(document).ready(function () {
+        $('#chat_table').DataTable({
+
+        });
+    });
+</script>
+-->

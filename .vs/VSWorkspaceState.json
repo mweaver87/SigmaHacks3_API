@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\accounts",
+    "\\accounts\\templates\\accounts",
+    "\\learning_dashboard",
+    "\\learning_dashboard\\templates",
+    "\\learning_dashboard\\templates\\learning_dashboard",
+    "\\locale"
+  ],
+  "SelectedNode": "\\learning_dashboard\\templates\\learning_dashboard\\dashboard.html",
+  "PreviewInSolutionExplorer": false
+}
